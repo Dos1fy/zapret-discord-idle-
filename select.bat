@@ -24,7 +24,7 @@ if exist "%LOCALAPPDATA%\Discord\Update.exe" (
 )
 :found
 
-:: Используем ping вместо curl (надёжнее, всегда есть)
+:: Используем ping вместо curl 
 set "CHECK_CMD=ping -n 1 %TEST_URL%"
 
 :: Если есть сохранённый рабочий конфиг
@@ -53,7 +53,7 @@ for %%f in (general*.bat) do (
     timeout /t 2 /nobreak >nul
 )
 
-:: Если ни один не подошёл – показываем ошибку и ждём
+:: Если ни один не подошёл – показывает ошибку
 echo Нет рабочего конфига. Проверьте ваши general*.bat
 pause
 exit /b
